@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            background: lightcyan;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1em;
+            gap: 0.5em;
+        }
+        .btn{
+            border: none;
+            border-radius: 1em;
+            background: #1e90ff;
+            color: white;
+            padding: 0.5em;
+        }
+        .btn:hover{
+            cursor: pointer;
+            background-color: blue;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button type="button" id="plus-btn" class="btn">+</button>
+        <p id="value">0</p>
+        <button type="button" id="minus-btn" class="btn">-</button>
+    </div>
+    <script>
+        const plusbtn=document.getElementById("plus-btn");
+        const minusbtn=document.getElementById("minus-btn");
+        const values=document.getElementById("value");
+        let count = 0;
+        plusbtn.addEventListener("click",function(){
+            count++;
+            values.textContent=`${count}`;
+        })
+        minusbtn.addEventListener("click",()=>{
+            count--;
+            values.textContent=(`${count}`);
+        })
+        console.log(count);
+        
+    </script>
+</body>
+</html>

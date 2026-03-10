@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: white;
+            color:black
+        }
+        .toggle{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="body toggle">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure dolore odio dolor corporis harum? Doloremque incidunt nulla iste tenetur, dolorem neque odio soluta facere nobis eligendi vel eveniet nisi delectus!</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure dolore odio dolor corporis harum? Doloremque incidunt nulla iste tenetur, dolorem neque odio soluta facere nobis eligendi vel eveniet nisi delectus!</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure dolore odio dolor corporis harum? Doloremque incidunt nulla iste tenetur, dolorem neque odio soluta facere nobis eligendi vel eveniet nisi delectus!</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure dolore odio dolor corporis harum? Doloremque incidunt nulla iste tenetur, dolorem neque odio soluta facere nobis eligendi vel eveniet nisi delectus!</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure dolore odio dolor corporis harum? Doloremque incidunt nulla iste tenetur, dolorem neque odio soluta facere nobis eligendi vel eveniet nisi delectus!</p>
+    <button type="button" class="btn">light</button>
+    <script>
+        const btn=document.querySelector(".btn");
+        const body=document.getElementsByClassName("body")[0];
+        btn.addEventListener("click",()=>{
+            if(body.classList.contains("toggle")){
+                btn.textContent="dark";
+                body.classList.remove("toggle");
+            }
+            else{
+                btn.textContent="light";
+                body.classList.add("toggle");
+            }
+        })
+    </script>
+</body>
+</html>

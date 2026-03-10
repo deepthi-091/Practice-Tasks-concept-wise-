@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .show{
+            background: #1e90ff;
+            color: white;
+            border-radius: 5px;
+            padding: 0.5em;
+            cursor: pointer;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="btn">hide text</button>
+    <p id="para" class="show">the txt should be bold</p>
+    <script>
+        const btn=document.getElementById("btn");
+        const txt=document.getElementById("para");
+        btn.addEventListener("click",()=>{
+            txt.textContent="clicked";
+            if(txt.classList.contains("show")){
+                txt.classList.remove("show");
+                txt.classList.add("hide");
+                btn.textContent="show txt";
+            }
+            else{
+                btn.textContent="hide";
+                txt.classList.remove("hide");
+                txt.classList.add("show");
+            }
+        })
+    </script>
+</body>
+</html>

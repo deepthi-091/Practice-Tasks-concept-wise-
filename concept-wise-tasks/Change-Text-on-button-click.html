@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn ,.para{
+            border: none;
+            border-radius: 1em;
+            background: #1e90ee;
+            color: white;
+            transition: 0.3s;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p class="para">Hello</p>
+    <button type="button" id="btn">Click</button>
+    <script>
+        const btn=document.querySelector("#btn");
+        let txt=document.querySelector(".para");
+        btn.addEventListener("click",()=>{
+            txt.textContent="Welcome to my website";
+        })
+    </script>
+</body>
+</html>

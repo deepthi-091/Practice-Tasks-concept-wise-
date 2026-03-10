@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form-container">
+        <label for="email">Email:<input type="email"  name="email" id="email"><span id="email-error" style="color: red;"></span></label>
+        <label for="passwd"><input type="password" name="passwd" id="passwd"><span id="passwd-error" style="color: red;"></span></label>
+        <button type="submit" id="submit">submit</button>
+
+        <p id="error-msg" style="color: red;"></p>
+    </form>
+    <script>
+        
+        const btn=document.getElementById("submit");
+        const form=document.getElementById("form-container");
+        const error=document.getElementById("error-msg");
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            const email=document.getElementById("email").value;
+            const passwd=document.getElementById("passwd").value;
+            document.getElementById("email-error").textContent="";
+            document.getElementById("passwd-error").textContent="";
+            if(!email){
+                document.getElementById("email-error").textContent="Email is required.";
+            }
+            if(!passwd){
+                document.getElementById("passwd-error").textContent="password is required";
+            }
+            if(email === "deepu@gmail.com" && passwd === "12345"){
+                window.location.href="succes.html";
+            }
+            else{
+                error.textContent="Invalid Credentials!";
+            }
+        })
+    </script>
+</body>
+</html>
