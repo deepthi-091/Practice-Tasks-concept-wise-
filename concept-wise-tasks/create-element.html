@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="add" class="add">add</button>
+    <button type="button" id="delete">delete</button>
+    <div class="task" id="task"></div>
+    <script>
+        const btn=document.getElementById("add");
+        const div=document.getElementById("task");
+        const dltbtn=document.getElementById("delete");
+        let count=1;
+        btn.addEventListener("click",(e)=>{
+            const item=document.createElement("p");
+            item.textContent=`Hello you are ${count}`;
+            count=count+1;
+            div.appendChild(item);
+        })
+        btn.addEventListener("click",()=>{
+            const item=document.querySelector("p");
+            div.removeChild(item);
+        })
+    </script>
+</body>
+</html>

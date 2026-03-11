@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            border-radius: 1em;
+            padding: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <button  id="btn">Show Message</button>
+    <p id="msg" class="msg"></p>
+    <script>
+        const btn=document.getElementById("btn");
+        const msg=document.getElementById("msg");
+
+        btn.addEventListener("click",()=>{
+            setTimeout(()=>{
+                msg.textContent="welcome";
+            },3000)
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><style>
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p id="profile" class="hide"></p>
+    <script>
+        const para=document.getElementById("profile");
+        function disappers(){
+            setTimeout(()=>{
+                if(para.classList.contains("active")){
+                    para.classList.remove("active");
+                    para.classList.add("hide");
+                }
+                else{
+                    para.className="active";
+                    para.textContent="Profile saved sucessfully"
+                }
+            },4000)
+        }
+        disappers();    
+    </script>
+</body>
+</html>
